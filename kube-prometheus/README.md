@@ -11,8 +11,7 @@ Trademarks: This software listing is packaged by Bitnami. The respective tradema
 ## TL;DR
 
 ```console
-helm repo add my-repo https://charts.bitnami.com/bitnami
-helm install my-release my-repo/kube-prometheus
+helm install my-release oci://registry-1.docker.io/bitnamicharts/kube-prometheus
 ```
 
 ## Introduction
@@ -41,8 +40,7 @@ Bitnami charts can be used with [Kubeapps](https://kubeapps.dev/) for deployment
 To install the chart with the release name `my-release`:
 
 ```console
-helm repo add my-repo https://charts.bitnami.com/bitnami
-helm install my-release my-repo/kube-prometheus
+helm install my-release oci://registry-1.docker.io/bitnamicharts/kube-prometheus
 ```
 
 The command deploys kube-prometheus on the Kubernetes cluster in the default configuration. The [configuration](#configuration-and-installation-details) section lists the parameters that can be configured during installation.
@@ -348,6 +346,9 @@ The command removes all the Kubernetes components associated with the chart and 
 | `prometheus.additionalAlertRelabelConfigsExternal.enabled`            | Enable additional Prometheus alert relabel configs that are managed externally to this chart                                     | `false`                   |
 | `prometheus.additionalAlertRelabelConfigsExternal.name`               | Name of the secret that Prometheus should use for the additional Prometheus alert relabel configuration                          | `""`                      |
 | `prometheus.additionalAlertRelabelConfigsExternal.key`                | Name of the key inside the secret to be used for the additional Prometheus alert relabel configuration                           | `""`                      |
+| `prometheus.additionalAlertManagerExternal.enabled`                   | Enable additional Prometheus AlertManager configs that are managed externally to this chart                                      | `false`                   |
+| `prometheus.additionalAlertManagerExternal.name`                      | Name of the secret that Prometheus should use for the additional Prometheus AlertManager configuration                           | `""`                      |
+| `prometheus.additionalAlertManagerExternal.key`                       | Name of the key inside the secret to be used for the additional Prometheus AlertManager configuration                            | `""`                      |
 | `prometheus.thanos.create`                                            | Create a Thanos sidecar container                                                                                                | `false`                   |
 | `prometheus.thanos.image.registry`                                    | Thanos image registry                                                                                                            | `docker.io`               |
 | `prometheus.thanos.image.repository`                                  | Thanos image name                                                                                                                | `bitnami/thanos`          |
@@ -713,7 +714,7 @@ Specify each parameter using the `--set key=value[,key=value]` argument to `helm
 helm install my-release \
   --set operator.logLevel=debug \
   --set prometheus.replicaCount=5 \
-    my-repo/kube-prometheus
+    oci://registry-1.docker.io/bitnamicharts/kube-prometheus
 ```
 
 The above command sets the Prometheus Operator `logLevel` to `debug`. Additionally it sets the `prometheus.replicaCount` to `5`.
@@ -721,7 +722,7 @@ The above command sets the Prometheus Operator `logLevel` to `debug`. Additional
 Alternatively, a YAML file that specifies the values for the parameters can be provided while installing the chart. For example,
 
 ```console
-helm install my-release -f values.yaml my-repo/kube-prometheus
+helm install my-release -f values.yaml oci://registry-1.docker.io/bitnamicharts/kube-prometheus
 ```
 
 > **Tip**: You can use the default [values.yaml](values.yaml)
@@ -769,7 +770,7 @@ Find more information about how to deal with common errors related to Bitnami's 
 ## Upgrading
 
 ```console
-helm upgrade my-release my-repo/kube-prometheus
+helm upgrade my-release oci://registry-1.docker.io/bitnamicharts/kube-prometheus
 ```
 
 ### To 8.0.0
@@ -892,7 +893,7 @@ To upgrade from version 2.0.0, previously remove the Thanos sidecar svc to avoid
 
 ```console
 kubectl delete svc my-relase-kube-prometheus-prometheus-thanos
-helm upgrade my-release --set prometheus.thanos.create=true my-repo/kube-prometheus
+helm upgrade my-release --set prometheus.thanos.create=true oci://registry-1.docker.io/bitnamicharts/kube-prometheus
 ```
 
 ### To 2.0.0
