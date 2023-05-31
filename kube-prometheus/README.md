@@ -309,6 +309,8 @@ The command removes all the Kubernetes components associated with the chart and 
 | `prometheus.podMonitorNamespaceSelector`                              | Namespaces to be selected for PodMonitor discovery                                                                               | `{}`                      |
 | `prometheus.probeSelector`                                            | Probes to be selected for target discovery.                                                                                      | `{}`                      |
 | `prometheus.probeNamespaceSelector`                                   | Namespaces to be selected for Probe discovery                                                                                    | `{}`                      |
+| `prometheus.scrapeConfigSelector`                                     | ScrapeConfig to be selected for target discovery.                                                                                | `{}`                      |
+| `prometheus.scrapeConfigNamespaceSelector`                            | Namespaces to be selected for ScrapeConfig discovery                                                                             | `{}`                      |
 | `prometheus.retention`                                                | Metrics retention days                                                                                                           | `10d`                     |
 | `prometheus.retentionSize`                                            | Maximum size of metrics                                                                                                          | `""`                      |
 | `prometheus.disableCompaction`                                        | Disable the compaction of the Prometheus TSDB                                                                                    | `false`                   |
@@ -787,6 +789,8 @@ As an alternative, use one of the preset configurations for pod affinity, pod an
 ## Troubleshooting
 
 Find more information about how to deal with common errors related to Bitnami's Helm charts in [this troubleshooting guide](https://docs.bitnami.com/general/how-to/troubleshoot-helm-chart-issues).
+
+While upgrading a chart, please note that there are certain limitations to upgrading CRDs. This limitation requires manual installation of the CRDs. Refer to the following [Helm documentation](https://helm.sh/docs/chart_best_practices/custom_resource_definitions/#some-caveats-and-explanations/).
 
 ## Upgrading
 
