@@ -1,8 +1,31 @@
 # Changelog
 
-## 4.5.1 (2025-01-13)
+## 4.5.6 (2025-02-17)
 
-* [bitnami/node-exporter] Release 4.5.1 ([#31322](https://github.com/bitnami/charts/pull/31322))
+* [bitnami/node-exporter] Release 4.5.6 ([#31950](https://github.com/bitnami/charts/pull/31950))
+
+## <small>4.5.5 (2025-02-12)</small>
+
+* [bitnami/*] Use CDN url for the Bitnami Application Icons (#31881) ([d9bb11a](https://github.com/bitnami/charts/commit/d9bb11a9076b9bfdcc70ea022c25ef50e9713657)), closes [#31881](https://github.com/bitnami/charts/issues/31881)
+* [bitnami/node-exporter] Release 4.5.5 (#31904) ([3853ffd](https://github.com/bitnami/charts/commit/3853ffd2338c526cc7108b7ee6adc082efb5eddf)), closes [#31904](https://github.com/bitnami/charts/issues/31904)
+
+## <small>4.5.4 (2025-02-05)</small>
+
+* [bitnami/node-exporter] Release 4.5.4 (#31772) ([f06a76e](https://github.com/bitnami/charts/commit/f06a76e802690eec4ef4efd997c4be21f1b784b3)), closes [#31772](https://github.com/bitnami/charts/issues/31772)
+* Update copyright year (#31682) ([e9f02f5](https://github.com/bitnami/charts/commit/e9f02f5007068751f7eb2270fece811e685c99b6)), closes [#31682](https://github.com/bitnami/charts/issues/31682)
+
+## <small>4.5.3 (2025-01-24)</small>
+
+* [bitnami/node-exporter] Release 4.5.3 (#31574) ([6c16122](https://github.com/bitnami/charts/commit/6c1612203c16b46cbd65f9ff0013a33c0f4c45ca)), closes [#31574](https://github.com/bitnami/charts/issues/31574)
+
+## <small>4.5.2 (2025-01-17)</small>
+
+* [bitnami/node-exporter] Release 4.5.2 (#31438) ([5b52be5](https://github.com/bitnami/charts/commit/5b52be5d111931d193fe2abd369838f2b8368299)), closes [#31438](https://github.com/bitnami/charts/issues/31438)
+
+## <small>4.5.1 (2025-01-13)</small>
+
+* [bitnami/*] Fix typo in README (#31052) ([b41a51d](https://github.com/bitnami/charts/commit/b41a51d1bd04841fc108b78d3b8357a5292771c8)), closes [#31052](https://github.com/bitnami/charts/issues/31052)
+* [bitnami/node-exporter] Release 4.5.1 (#31322) ([2a79a91](https://github.com/bitnami/charts/commit/2a79a9190d05e3994acae2a2775deeba261f0143)), closes [#31322](https://github.com/bitnami/charts/issues/31322)
 
 ## 4.5.0 (2024-12-10)
 
